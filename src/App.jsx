@@ -7,17 +7,17 @@ const App = () => {
 
 	return (
 		<>
-			<Name changeName={event => changeName(event, setStateName)}></Name>
-			<Button action={sayHello}></Button>
+			<Name
+			// changeName={event => getValue(stateName, event, setStateName)}
+			></Name>
+			<Button action={event => clickMe(setStateName, event)}></Button>
 			<h1>{stateName}</h1>
 		</>
 	);
 };
-const changeName = (event, setStatename) => {
-	setStatename(event);
-};
-const sayHello = () => {
-	console.log('sayHellooooo');
-};
 
+const clickMe = (setStateName, event) => {
+	setStateName(event);
+};
+clickMe();
 export default App;
